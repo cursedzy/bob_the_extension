@@ -1,0 +1,38 @@
+
+{
+    "manifest_version": 3,
+    "name": "Bob The Dungeon Tiefling",
+    "version": "1.0",
+    "description": "Просто весёлый тифлинг  Боб, который может помочь с поиском необходимой способности или даже перевести ваш лист персонажа в D&D Beyond.",
+    "permissions": ["activeTab", "storage"],
+
+    "content_scripts": [{
+        "js": ["lib/purify.min.js", "content.js" ],
+        "matches": [
+            "https://www.dndbeyond.com/characters/*",
+            "https://www.dndbeyond.com/monsters/*",
+            "https://www.dndbeyond.com/magic-items/*",
+            "https://www.dndbeyond.com/spells/*",
+            "https://www.dndbeyond.com/sources/*",
+            "https://www.dndbeyond.com/encounters/*",
+            "https://www.dndbeyond.com/combat-tracker/*"
+        ]
+    }],
+
+    "icons": {
+        "16":"/images/bob_dice_16px.png",
+        "48":"/images/bob_dice_48px.png",
+        "128":"/images/bob_dice_128px.png"
+    },
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon":{
+            "16":"/images/bob_dice_16px.png",
+            "48":"/images/bob_dice_48px.png",
+            "128":"/images/bob_dice_128px.png"
+      }
+    }
+
+  }
+  
